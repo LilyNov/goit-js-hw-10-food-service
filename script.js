@@ -12,13 +12,15 @@ const Theme = {
   DARK: "dark-theme",
 };
 
-//console.log(templateMenuCard(menuList[0]));
+//чекбокс
 refs.checkBox.addEventListener("change", onChangeThemeOfBody);
+savedCurrentTheme();
 
+//шаблонизатор
 const menuCardsMarkup = createMenuCardsMarkup(menuList);
 refs.list.insertAdjacentHTML("beforeend", menuCardsMarkup);
 
-savedCurrentTheme();
+//функции
 function createMenuCardsMarkup(menuList) {
   return menuList.map(templateMenuCard).join("");
 }
@@ -38,7 +40,7 @@ function onChangeThemeOfBody() {
 function savedCurrentTheme() {
   const savedTheme = localStorage.getItem("myCurrentTheme");
   if (savedTheme === "dark-theme") {
-    console.log("привет");
+    //console.log("привет");
     refs.checkBox.checked === true;
   }
 }
