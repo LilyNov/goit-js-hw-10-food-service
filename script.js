@@ -27,8 +27,8 @@ function createMenuCardsMarkup(menuList) {
 
 function onChangeThemeOfBody() {
   if (refs.checkBox.checked) {
-    refs.body.classList.add(Theme.DARK);
-    refs.body.classList.remove(Theme.LIGHT);
+  refs.body.classList.add(Theme.DARK);
+    refs.body.classList.remove(Theme.LIGHT); 
     localStorage.setItem("myCurrentTheme", "dark-theme");
   } else {
     refs.body.classList.add(Theme.LIGHT);
@@ -40,7 +40,7 @@ function onChangeThemeOfBody() {
 function savedCurrentTheme() {
   const savedTheme = localStorage.getItem("myCurrentTheme");
   if (savedTheme === "dark-theme") {
-    //console.log("привет");
-    refs.checkBox.checked === true;
+   refs.body.classList.add(Theme.DARK);
+    refs.checkBox.checked = true;
   }
 }
